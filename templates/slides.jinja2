@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Four Seasons</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet" >
+  </head>
+  <body background="{{url_for('static',filename='hotel12.jpg')}}">
+
+      <div class ="supreme">
+        <div class ="animated slideInDown">
+          <img src="{{url_for('static',filename='four seasons.png')}}" width="600" height= 399 border=0 alt="">
+      </div>
+      <div class = "animated fadeIn">
+          <h1 name ="heading" class="hd" id="tre"> Four Seasons </h1>
+          <a href = "slide1.jinja2" style="float:left"><button><-- Back</button></a>
+      </div>
+      <form action ="slide2.py" method="get">
+      <div class ="col-3">
+        Options : <input type = "radio" name ="choice" value ="list"/>Star ratings
+        <input type = "radio" name ="choice" value="restaurant"/>Restaurant
+        <input type = "radio" name ="choice" value = "rooms"/>Rooms
+        <input type = "radio" name ="choice" value="facilities"/>Facilities
+        <input type = "radio" name ="choice" value = "location"/>Location
+      </div>
+
+      <div class ="col-4">
+          <input type ="submit" value ="QUERY"/>
+      </div>
+      </div>
+      </form>
+    </body>
+              </html>

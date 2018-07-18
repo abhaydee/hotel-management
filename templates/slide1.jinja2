@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Hotels</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet" type="text/css">
+  <script src = "{{url_for('static',filename='js/wow.min.js')}}"></script>
+  <script>
+      new WOW().init();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</head>
+  <body background = "{{url_for('static',filename='hotel12.jpg')}}">
+  <div class ="supreme">
+      <div class ="wow animated fadeInDown" data-wow-delay = "1s" >
+          <img src="{{url_for('static',filename='hotels-6.png')}}" width= 1200 height= 500 border=0 alt="">
+      </div>
+      <div class = "col-2">
+      <div>
+       <div>
+          <audio controls autoplay ><source src = "{{url_for('static',filename='credits.mp3')}}" type = "audio/mp3" ></audio>
+       </div>
+     </form>
+     <div class="wow fadeIn animated " data-wow-delay = "6s">
+        <a class="btn waves-effect waves-light black-text" href="/rooms/"><button>Rooms</button></a>
+        <a class="btn waves-effect waves-light black-text" href="/guests/"><button>Guests</button></a>
+        <a class="btn waves-effect waves-light black-text" href="/employees/"><button>Employees</button></a>
+        <a class="btn waves-effect waves-light black-text" href="/booking/"><button>Booking</button></a>
+     </body>
+  </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>List of employees</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  </head>
+  <body background="{{url_for('static',filename='hotel12.jpg')}}">
+    <h1>this is list of employees</h1>
+
+    <table>
+      <table border = 1 align = center>
+           <thead>
+              <th>Employee ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Designation</th>
+              <th>Phone</th>
+              <th>Address</th>
+           </thead>
+
+           {% for row in emplist %}
+              <tr>
+                 <td>{{row[0]}}</td>
+                 <td>{{row[1]}}</td>
+                 <td>{{row[2]}}</td>
+                 <td>{{row[3]}}</td>
+                 <td>{{row[4]}}</td>
+                 <td>{{row[5]}}</td>
+              </tr>
+           {% endfor %}
+        </table>
+        <h4><a href = "/">Go back to home page</a></h4>
+        <a href="#" id="delete" class="btn btn-large waves-effect waves-light teal">Delete</a>-->
+        <button>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+        
+        $( "#delete" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+        </script>
+        
+  </body>
+</html>

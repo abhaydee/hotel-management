@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html lang=en>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Booking</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  </head>
+  <body background="{{url_for('static',filename='hotel12.jpg')}}">
+
+    {% if error is defined %}
+        <div>
+            <h1>{{ error }}</h1>
+        </div>
+    {% else %}
+        <div>
+          <div>
+            <h1>Enter the booking details</h1>
+          <form action ="/booking/" method="post">
+              <div class ="col-3">
+              <!--  Booking no <input type = "text" name ="bookingno" /><br>-->
+                Check in <input type = "text" name ="checkin"/><br>
+                Check out<input type = "text" name ="checkout" /><br>
+                Guest name<input type = "text" name ="guestname" /><br>
+                Room no<input type = "text" name ="roomno" /><br>
+                Phone<input type = "text" name ="phone" /><br>
+                Address<input type = "text" name = "address">
+              </div>
+              <div class ="col-4">
+                  <input type ="submit" value ="Enter"/>
+              </div>
+            </form>
+            </div>
+
+        <div>{{ msg }}</div>
+    {% endif %}
+    </body>
+</html>

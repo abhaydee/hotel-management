@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>List of rooms</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</script>
+  </head>
+  <body background="{{url_for('static',filename='hotel12.jpg')}}">
+    <h1>this is list of rooms</h1>
+
+    <table>
+      <table border = 1 align = center>
+           <thead>
+              <th>Room no</th>
+              <th>Type</th>
+              <th>Available</th>
+              <th>Guest</th>
+              <th>Price</th>
+
+           </thead>
+
+           {% for row in roomlist %}
+              <tr>
+                 <td>{{row[0]}}</td>
+                 <td>{{row[1]}}</td>
+                 <td>{{row[2]}}</td>
+                 <td>{{row[3]}}</td>
+                 <td>{{row[4]}}</td>
+              </tr>
+           {% endfor %}
+        </table>
+        <h4><a href = "/">Go back to home page</a></h4>
+
+  </body>
+</html>
